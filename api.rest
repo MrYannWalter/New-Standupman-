@@ -1,0 +1,42 @@
+GET http://localhost:5000
+
+###
+
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+  "username" : "mayawa",
+  "password" : "030405"
+}
+
+###
+POST http://localhost:5000/users/register
+Content-Type: application/json
+
+{
+  "user":{
+  "username" : "mayawa",
+  "email" : "mayawa@gmail.com",
+  "full_name" : "mandeng yann walter",
+  "password" : "030405",
+  "profile_pic" : "/logo.png"
+}
+
+}
+###
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.e30.pSogKqjVaHTX_UmkrqcaL7x_bJRagxaHyuAZ0y6S0XY
+
+###
+GET http://localhost:5000/standups
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.e30.pSogKqjVaHTX_UmkrqcaL7x_bJRagxaHyuAZ0y6S0XY
+
+###
+POST  http://localhost:5000/standups/subscribe
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.e30.pSogKqjVaHTX_UmkrqcaL7x_bJRagxaHyuAZ0y6S0XY
+Content-Type: application/json
+
+{
+"standup_id": "66b3dab1135fcc1d3c8059ec"
+}
